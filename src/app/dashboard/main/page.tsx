@@ -1,8 +1,22 @@
 import React from "react";
+import { SimpleWidget } from '../../../components/SimpleWidget';
+
+
+export const metadata = {
+ title: 'Admin Dashboard',
+ description: 'SEO Dashboard',
+};
+
 export default function MainPage() {
   return (
-    <div>
-      <h1>Hello Main.</h1>
+    <div className="text-black p-2">
+      <h1 className="mt-2 text-3xl">Dashboard</h1>
+      <span className="text-xl">Informacion General</span>
+
+      <div className="flex flex-wrap p-2 items-center justify-center">
+        <SimpleWidget />
+        <SimpleWidget />
+      </div>
     </div>
   );
 }
