@@ -5,6 +5,8 @@ import { useDispatch, useSelector,TypedUseSelectorHook } from 'react-redux'
 import counterReducer from './counter/counterSlice'
 // export default pokemonsSlice, podemos cambiarle el nombre a pokemonsReducer
 import pokemonsReducer from './pokemons/pokemons';
+import { localStorageMiddleware } from './middlewares/localStorage-middleware';
+
 
 
 
@@ -13,6 +15,13 @@ export const store = configureStore({
     counter: counterReducer, // cambiasmos el nombre a counter
     pokemons: pokemonsReducer // podemos cambiarle el nombre a pokemons
   },
+  // middleware: (getDefaultMiddleware) =>
+  //   getDefaultMiddleware({
+  //     thunk: {
+  //       extraArgument: localStorageMiddleware,
+  //     },
+  //     serializableCheck: false,
+  //   }).concat(localStorageMiddleware as any),
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

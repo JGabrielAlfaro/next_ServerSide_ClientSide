@@ -1,5 +1,6 @@
 export { PokemonCard } from './components/PokemonCard';
 export {PokemonGrid} from './components/PokemonGrid';
+export {FavoritePokemons} from './components/FavoritePokemons';
 
 //Interfaces
 export type { SimplePokemon } from './interfaces/simple-pokemos';
