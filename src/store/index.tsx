@@ -1,10 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from './counter/counterSlice'
 import { useDispatch, useSelector,TypedUseSelectorHook } from 'react-redux'
+
+// export default counterSlice, podemos cambiarle el nombre a counterReducer
+import counterReducer from './counter/counterSlice'
+// export default pokemonsSlice, podemos cambiarle el nombre a pokemonsReducer
+import pokemonsReducer from './pokemons/pokemons';
+
+
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer
+    counter: counterReducer, // cambiasmos el nombre a counter
+    pokemons: pokemonsReducer // podemos cambiarle el nombre a pokemons
   },
 })
 
